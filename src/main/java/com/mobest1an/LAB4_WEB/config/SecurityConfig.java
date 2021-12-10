@@ -39,7 +39,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/addCheck").hasAuthority(Permission.USERS_ADD_DOTES.getPermission())
                 .anyRequest()
                 .authenticated()
-//                .permitAll()
                 .and()
                 .apply(jwtConfigurer);
     }
